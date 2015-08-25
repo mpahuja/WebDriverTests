@@ -3,9 +3,9 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import tests.Base;
+import tests.BaseTest;
 
-public class Home extends Base {
+public class Home extends BaseTest {
 
     private final WebDriver driver;
     By loginLink = By.cssSelector("a[href*='https://www.appdirect.com/login']");

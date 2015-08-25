@@ -1,4 +1,4 @@
-package tests;
+package utils;
 
 import java.util.Random;
 
@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Common {
-
-//    private WebDriver driver;
         
     public void waitForElement(WebDriver driver,By locator, Integer... timeout) {
         try {

@@ -3,7 +3,7 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import tests.Common;
+import utils.Common;
 
 public class SignUp extends Common{
 
@@ -13,6 +13,7 @@ public class SignUp extends Common{
     By emailAddress = By.name("emailAddress");
     By signUpButton = By.className("userSignupButton");
     By signUpConfirmation = By.className("signupConfirmationPanel");
+    By invalidEmail = By.className("form-ui-invalid");
 
     public SignUp(WebDriver driver) {
     	super();
@@ -23,13 +24,6 @@ public class SignUp extends Common{
     	driver.findElement(emailAddress).sendKeys(email);
     }
     
-    public void enterInValidEmail(){
-    	String inValidEmail = "123atabc";
-    	driver.findElement(emailAddress).sendKeys(inValidEmail);
-    }
-    
-    
-    
     public void clickSignUp(){
     	driver.findElement(signUpButton).click();
     }
@@ -38,4 +32,7 @@ public class SignUp extends Common{
         return waitForIsDisplayed(driver,signUpConfirmation, 10);
     }
     
+    public Boolean isEmailInValidErrorDisplayed(){
+    	return waitForIsDisplayed(driver,invalidEmail,5);
+    }
 }

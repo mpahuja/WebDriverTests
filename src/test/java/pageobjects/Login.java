@@ -3,12 +3,12 @@ package pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import tests.Common;
+import utils.Common;
 
 public class Login extends Common{
 
     private final WebDriver driver;
-    By signUpLink = By.cssSelector("a[href*='./signup");
+    By signUpLink = By.cssSelector("a[href*='./signup']");
     By email = By.id("username");
 
     public Login(WebDriver driver) {
