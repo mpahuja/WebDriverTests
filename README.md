@@ -3,11 +3,11 @@ Sample Java Project
 
 Test AppDirect's Signup page.
 
-Download the source by using 
+#Download the source by using 
  - git clone https://github.com/mpahuja/WebDriverTests
 
-Install all dependencies
+#Install all dependencies
  - mvn install
 
-Run all tests
+#Run all tests
  - mvn clean test
